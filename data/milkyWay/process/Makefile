@@ -1,5 +1,5 @@
 # Makefile for galaxy map generator
-# 
+#
 # -------------------------------------------------
 # Copyright 2015-2019 Dominic Ford
 #
@@ -26,9 +26,9 @@ DATE    = 29/10/2017
 PATHLINK= /
 
 WARNINGS= -Wall -Wno-format-truncation
-COMPILE = $(CC) $(WARNINGS) -g -fopenmp -c -I $(CWD)/src
+COMPILE = $(CC) $(WARNINGS) -g -fopenmp -c -I $(CWD)/src $(CFLAGS)
 LIBS    = -lpng -lgsl -lgslcblas -lm
-LINK    = $(CC) $(WARNINGS) -g -fopenmp
+LINK    = $(CC) $(WARNINGS) -g -fopenmp $(LDFLAGS)
 
 OPTIMISATION = -O3
 

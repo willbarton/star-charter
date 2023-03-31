@@ -1,5 +1,5 @@
 # Makefile for StarCharter
-# 
+#
 # -------------------------------------------------
 # Copyright 2015-2022 Dominic Ford
 #
@@ -26,9 +26,9 @@ DATE    = 12/12/2021
 PATHLINK= /
 
 WARNINGS= -Wall -Wno-format-truncation -Wno-unused-result
-COMPILE = $(CC) $(WARNINGS) -g -fopenmp -c -I $(CWD)/src
+COMPILE = $(CC) $(WARNINGS) -g -fopenmp -c -I $(CWD)/src $(CFLAGS)
 LIBS    = -lcairo -lgsl -lgslcblas -lz -lm
-LINK    = $(CC) $(WARNINGS) -g -fopenmp
+LINK    = $(CC) $(WARNINGS) -g -fopenmp $(LDFLAGS)
 
 OPTIMISATION = -O3
 
